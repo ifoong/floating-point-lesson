@@ -56,9 +56,9 @@ rounding. More on this later.
   "question": "Fill in the missing information in the following table.",
   "headings": ["Fractional value", "Binary representation", "Decimal representation"],
   "grid": [
-              ["\\(\\frac{1}{8}\\)",    0.001,    0.125   ],
-              ["\\(\\frac{3}{4}\\)",    "?",      "?"     ],
-              ["\\(\\frac{25}{16}\\)",  "?",      "?"     ],
+              ["\\(\frac{1}{8}\\)",    0.001,    0.125   ],
+              ["\\(\frac{3}{4}\\)",    "?",      "?"     ],
+              ["\\(\frac{25}{16}\\)",  "?",      "?"     ],
               ["?",                     10.1011,  "?"     ],
               ["?",                     1.001,    "?"     ],
               ["?",                     "?",      5.875   ],
@@ -90,7 +90,7 @@ The IEEE floating-point standard represents a number as follows:
 
 - The _sign_ \\(s\\) is 0 if \\(V\\) is positive, and 1 if \\(V\\) is negative.
 - The _significand_ \\(M\\) is a fractional binary number, as discussed in the
-  previous section, such that \\(1 \\le M \\lt 2\\) or \\(0 \\le M \\lt 1\\).
+  previous section, such that \\(1 \le M \lt 2\\) or \\(0 \le M \lt 1\\).
 - The _exponent_ \\(E\\) weighs the value by a power of 2.
 
 Given a fixed number of bits to represent the value \\(V\\), we split the bits
@@ -128,11 +128,11 @@ of \\(E\\):
 1. Deduct \\(2^{k-1}\\) from the above result. For single precision, this
    should give you a value between -126 and 127.
 
-Written as a formula, this is equivalent to using \\(E = \\mathtt{exp} - 2^{k-1}\\).
+Written as a formula, this is equivalent to using \\(E = \mathtt{exp} - 2^{k-1}\\).
 
 To determine the value of \\(M\\), prepend `frac` with `1.`. Then, use the
 binary fraction notation (as decribed above) to interpret the value. Written as
-a formula, this is equivalent to using \\(M = \\mathtt{frac} + 1\\).
+a formula, this is equivalent to using \\(M = \mathtt{frac} + 1\\).
 
 #### Example
 
@@ -225,7 +225,7 @@ Then, we interpret each field separately:
     E   = 1₁₀ - 127₁₀   = -126₁₀
     M   = 0.1₂          = 0.5₁₀
 
-Therefore, \\(V = 0.5 \times 2^{-126} = 2^{-127}\\\).
+Therefore, \\(V = 0.5 \times 2^{-126} = 2^{-127}\\).
 
 { "format":   "table",
   "question": "Given the following bit sequences, determine the values of \\(s\\), \\(E\\) and \\(M\\).",
@@ -248,7 +248,7 @@ Therefore, \\(V = 0.5 \times 2^{-126} = 2^{-127}\\\).
 
 This occurs when the exponent field is all 1s.
 
-- If `frac` is all 0s, then \\(V\\) is either \\(+\\infty\\)  or \\(-\\infty\\),
+- If `frac` is all 0s, then \\(V\\) is either \\(+\infty\\)  or \\(-\infty\\),
   depending on `s`.
 - Otherwise, \\(V = \mathrm{NaN}\\), which stands for "Not a Number"
 
@@ -266,8 +266,8 @@ This occurs when the exponent field is all 1s.
   "question": "What is the value of `0111 1111 1000 0000 0000 0000 0000 0000`?",
   "answer":   "B",
   "options": {
-    "A": "\\(-\\infty\\)",
-    "B": "\\(+\\infty\\)",
+    "A": "\\(-\infty\\)",
+    "B": "\\(+\infty\\)",
     "C": "NaN"
   }
 }
