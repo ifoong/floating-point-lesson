@@ -50,7 +50,7 @@ describes this in detail.
 <span class='label radius'>Note</span> You might have noticed that fractional
 binary notation can only represent numbers that can be written as \\(\sum x
 \cdot 2^y\\). Given a fixed number of bits, other numbers are approximated by
-rounding. More on this later.
+rounding. More on this [later](#rounding).
 
 { "format":   "table",
   "question": "Fill in the missing information in the following table.",
@@ -101,7 +101,7 @@ into three fields:
 - the third is a \\(n\\)-bit field `frac` that encodes \\(M\\)
 
 <span class='radius label'>Note</span> the value of \\(M\\) depends on both `frac` and `exp`. More
-details later.
+details [later](#case-1-normalized-values).
 
 The two most common formats are:
 
