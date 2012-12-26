@@ -45,7 +45,7 @@ the binary point '.' are weighted by positive powers of 2, whereas the digits
 on the right are weighted by negative powers of 2. The following diagram
 describes this in detail.
 
-![Fractional binary representation.](img/binary.png)
+![Fractional binary representation.](images/binary.png)
 
 <span class='label radius'>Note</span> You might have noticed that fractional
 binary notation can only represent numbers that can be written as \\(\sum x
@@ -116,7 +116,7 @@ Given a sequence of 32 bits (or 64 bits for double precision), there are three
 different cases for interpreting the encoded value depending on the value of
 `exp`. Each case is explained in detail below.
 
-![Different cases of interpreting a float.](img/cases.png)
+![Different cases of interpreting a float.](images/cases.png)
 
 ## Case 1: Normalized Values
 
@@ -293,7 +293,7 @@ decimals, this rounds 2.35 and 2.45 to 2.4, if we are only allowed 1 decimal
 place. Note that 2.46 is still rounded to 2.5, since it's nearer to 2.5 than
 to 2.4.
 
-![Round-to-even with decimals.](img/decimal_line.png)
+![Round-to-even with decimals.](images/decimal_line.png)
 
 The same applies to binary representations. Suppose we only have 1 bits with a
 leading 1. Representable values are: 1.0₂, 1.1₂.
@@ -305,7 +305,7 @@ nearer to 1.0₂ than to 1.1₂.
 - 1.010₂ is 0.010₂ away from both 1.0₂ and from 1.1₂. It's rounded to 1.0₂
   using round-to-even.
 
-![Round-to-even with binary.](img/binary_line.png)
+![Round-to-even with binary.](images/binary_line.png)
 
 { "format":   "short",
   "question": "Consider a floating-point format that only allows 4 bits for the `frac` field. What value will \\(1.7\\) be rounded to? Give the answer in decimal notation.",
