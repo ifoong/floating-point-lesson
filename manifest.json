@@ -1,6 +1,0 @@
-{
-  "title": "IEEE Floating Point Representation",
-  "description": "In this lesson, we will see how numbers are represented in the IEEE floating-point format. Adapted from section 2.4 of the CSAPP textbook written by Randy Bryant and David O'Hallaron.",
-  "categories": ["computer systems", "data representation"],
-  "static_paths": ["images"]
-}
