@@ -52,28 +52,28 @@ binary notation can only represent numbers that can be written as \\(\sum x
 \cdot 2^y\\). Given a fixed number of bits, other numbers are approximated by
 rounding. More on this [later](#rounding).
 
-{ "format":   "table",
-  "question": "Fill in the missing information in the following table.",
-  "headings": ["Fractional value", "Binary representation", "Decimal representation"],
-  "grid": [
-              ["\\(\frac{1}{8}\\)",    0.001,    0.125   ],
-              ["\\(\frac{3}{4}\\)",    "?",      "?"     ],
-              ["\\(\frac{25}{16}\\)",  "?",      "?"     ],
-              ["?",                     10.1011,  "?"     ],
-              ["?",                     1.001,    "?"     ],
-              ["?",                     "?",      5.875   ],
-              ["?",                     "?",      3.1875  ]
-          ],
-  "answer": [
-              [0,                       0,        0       ],
-              [0,                       0.11,     0.75    ],
-              [0,                       1.1001,   1.5625  ],
-              ["43/16",                 0,        2.6875  ],
-              ["9/8",                   0,        1.125   ],
-              ["47/8",                  101.111,  0       ],
-              ["51/16",                 11.0011,  0       ]
-            ]
-}
+"""
+format:   table
+question: Fill in the missing values in the following table.
+headings: [Fractional value, Binary representation, Decimal representation]
+grid:
+  - ['\(\frac{1}{8}\)',    0.001,    0.125   ]
+  - ['\(\frac{3}{4}\)',    '?',      '?'     ]
+  - ['\(\frac{25}{16}\)',  '?',      '?'     ]
+  - ['?',                  10.1011,  '?'     ]
+  - ['?',                  1.001,    '?'     ]
+  - ['?',                  '?',      5.875   ]
+  - ['?',                  '?',      3.1875  ]
+answer: [
+          [0,                       0,        0       ],
+          [0,                       0.11,     0.75    ],
+          [0,                       1.1001,   1.5625  ],
+          ['43/16',                 0,        2.6875  ],
+          ['9/8',                   0,        1.125   ],
+          ['47/8',                  101.111,  0       ],
+          ['51/16',                 11.0011,  0       ]
+        ]
+"""
 
 # IEEE 754
 
@@ -158,10 +158,11 @@ Then, we interpret each field separately:
 
 Therefore, \\(V = 1.5625 \times 2^4 = 25\\).
 
-{ "format":   "short",
-  "question": "What is the decimal representation of `0100 0001 1001 1000 0000 0000 0000 0000`?",
-  "answer":   19
-}
+"""
+format:   short
+question: What is the decimal representation of `0100 0001 1001 1000 0000 0000 0000 0000`?
+answer:   19
+"""
 
 #### Example
 
@@ -190,10 +191,11 @@ Finally, we determine the values for `exp` and `frac`.
 
 Therefore, the binary representation is `0100 0100 1010 0000 0000 0000 0000 0000`.
 
-{ "format":   "short",
-  "question": "What is the binary representation of \\(68\\) in single-precision format? Give the bit sequence without spaces.",
-  "answer":   "01000010100010000000000000000000"
-}
+"""
+format: short
+question: What is the binary representation of \(68\) in single-precision format? Give the bit sequence without spaces.
+answer: "01000010100010000000000000000000"
+"""
 
 ## Case 2: Denormalized Values
 
@@ -227,22 +229,23 @@ Then, we interpret each field separately:
 
 Therefore, \\(V = 0.5 \times 2^{-126} = 2^{-127}\\).
 
-{ "format":   "table",
-  "question": "Given the following bit sequences, determine the values of \\(s\\), \\(E\\) and \\(M\\).",
-  "headings": ["Bits", "\\(s\\)", "\\(E\\)", "\\(M\\)"],
-  "grid":   [
-              ["`0000 0000 0100 0000 0000 0000 0000 0000`", "?", "?", "?"],
-              ["`1000 0000 0110 0000 0000 0000 0000 0000`", "?", "?", "?"],
-              ["`0000 0000 0000 0000 0000 0000 0000 0000`", "?", "?", "?"],
-              ["`1000 0000 0000 0000 0000 0000 0000 0000`", "?", "?", "?"]
-            ],
-  "answer": [
-              [0,                                         0,   -126, 0.5  ],
-              [0,                                         1,   -126, 0.75 ],
-              [0,                                         0,   -126, 0    ],
-              [0,                                         1,   -126, 0    ]
-            ]
-}
+"""
+format:   table
+question: Given the following bit sequences, determine the values of \(s\), \(E\) and \(M\).
+headings: [Bits, '\(s\)', '\(E\)', '\(M\)']
+grid:   [
+            ["`0000 0000 0100 0000 0000 0000 0000 0000`", "?", "?", "?"],
+            ["`1000 0000 0110 0000 0000 0000 0000 0000`", "?", "?", "?"],
+            ["`0000 0000 0000 0000 0000 0000 0000 0000`", "?", "?", "?"],
+            ["`1000 0000 0000 0000 0000 0000 0000 0000`", "?", "?", "?"]
+          ]
+answer: [
+            [0,                                         0,   -126, 0.5  ],
+            [0,                                         1,   -126, 0.75 ],
+            [0,                                         0,   -126, 0    ],
+            [0,                                         1,   -126, 0    ]
+          ]
+"""
 
 ## Case 3: Special Values
 
@@ -252,25 +255,27 @@ This occurs when the exponent field is all 1s.
   depending on `s`.
 - Otherwise, \\(V = \mathrm{NaN}\\), which stands for "Not a Number"
 
-{ "format":   "short",
-  "question": "What is the value of `1111 1111 1111 0000 0000 0000 0000 0000`?",
-  "answer":   "NaN"
-}
+"""
+format: short
+question: What is the value of `1111 1111 1111 0000 0000 0000 0000 0000`?
+answer: NaN
+"""
 
-{ "format":   "short",
-  "question": "What is the value of `0111 1111 1111 0000 0000 0000 0000 0000`?",
-  "answer":   "NaN"
-}
+"""
+format: short
+question: What is the value of `0111 1111 1111 0000 0000 0000 0000 0000`?
+answer: NaN
+"""
 
-{ "format":   "multi",
-  "question": "What is the value of `0111 1111 1000 0000 0000 0000 0000 0000`?",
-  "answer":   "B",
-  "options": {
-    "A": "\\(-\infty\\)",
-    "B": "\\(+\infty\\)",
-    "C": "NaN"
-  }
-}
+"""
+format: multi
+question: What is the value of `0111 1111 1000 0000 0000 0000 0000 0000`?
+answer: B
+options:
+  A: '\(-\infty\)'
+  B: '\(+\infty\)'
+  C: NaN
+"""
 
 # Rounding
 
@@ -307,15 +312,17 @@ nearer to 1.0₂ than to 1.1₂.
 
 ![Round-to-even with binary.](images/binary_line.png)
 
-{ "format":   "short",
-  "question": "Consider a floating-point format that only allows 4 bits for the `frac` field. What value will \\(1.7\\) be rounded to? Give the answer in decimal notation.",
-  "answer":   1.6875
-}
+"""
+format: short
+question: Consider a floating-point format that only allows 4 bits for the `frac` field. What value will \(1.7\) be rounded to? Give the answer in decimal notation.
+answer: 1.6875
+"""
 
-{ "format":   "short",
-  "question": "Consider a floating-point format that only allows 4 bits for the `frac` field. What value will \\(1.71875\\) be rounded to? Give the answer in decimal notation.",
-  "answer":   1.6875
-}
+"""
+format: short
+question: Consider a floating-point format that only allows 4 bits for the `frac` field. What value will \(1.71875\) be rounded to? Give the answer in decimal notation.
+answer: 1.6875
+"""
 
 If you would like to have more practice, use this [online binary-decimal
 converter][converter] and generate your own examples.
