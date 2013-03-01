@@ -45,7 +45,11 @@ the binary point '.' are weighted by positive powers of 2, whereas the digits
 on the right are weighted by negative powers of 2. The following diagram
 describes this in detail.
 
-![Fractional binary representation.](images/binary.png)
+         |           |               |     |           |           |           |              |              |     |
+---------|-----------|---------------|-----|-----------|-----------|-----------|--------------|--------------|-----|-------------
+position | \\(m\\)   | \\(m-1\\)     | ... | 2         | 1         | 0         | -1           | -2           | ... | \\(-n\\)
+bit      | \\(b_m\\) | \\(b_{m-1}\\) | ... | \\(b_2\\) | \\(b_1\\) | \\(b_0\\) | \\(b_{-1}\\) | \\(b_{-2}\\) | ... | \\(b_{-n}\\)
+weight   | \\(2^m\\) | \\(2^{m-1}\\) | ... | \\(2^2\\) | \\(2^1\\) | \\(2^0\\) | \\(2^{-1}\\) | \\(2^{-2}\\) | ... | \\(2^{-n}\\)
 
 <span class='label radius'>Note</span> You might have noticed that fractional
 binary notation can only represent numbers that can be written as \\(\sum x
