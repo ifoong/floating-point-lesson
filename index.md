@@ -26,9 +26,9 @@ The value \\(d\\) is defined as
 
 \\[d = \sum_{i=-n}^m d_i \cdot 10^i\\]
 
-For example, \\(1.28 = (1 \cdot 10^1) + (2 \cdot 10^{-1}) + (8 \cdot 10^{-2})\\).
+For example, \\(1.28 = (1 \cdot 10^0) + (2 \cdot 10^{-1}) + (8 \cdot 10^{-2})\\).
 Notice that digits on the left of the decimal point '.' are
-weighted by positive powers of 10, and digits on the right are weighted by
+weighted by non-negative powers of 10, and digits on the right are weighted by
 negative powers of 10. This is known as [positional notation][pos].
 
 ## Binary
