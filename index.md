@@ -2,7 +2,7 @@
 
 Very large numbers \\(\left(\left|V\right|\gg 0\right)\\) and numbers very
 close to zero \\(\left(\left|V\right|\ll 1\right)\\) are represented in the
-form \\(V = x \cdot 2^y\\). It's important to note that the representation is
+form \\(V = x \cdot 2^y\\). It is important to note that the representation is
 only an approximation; indeed, it would be impossible to precisely represent
 the uncountably infinite space of all real numbers with a finite number of
 bits.
