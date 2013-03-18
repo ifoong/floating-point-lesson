@@ -41,7 +41,7 @@ value \\(b\\) is defined as
 
 For example, \\(101.01\_2 = (1 \cdot 2^2) + (0 \cdot 2^1) + (1 \cdot 2^0) + (0
 \cdot 2^{-1}) + (1 \cdot 2^{-2})\\). Again, notice that the bits on the left of
-the binary point '.' are weighted by positive powers of 2, whereas the digits
+the binary point '.' are weighted by non-negative powers of 2, whereas the digits
 on the right are weighted by negative powers of 2. The following diagram
 describes this in detail.
 
