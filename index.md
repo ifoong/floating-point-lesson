@@ -8,8 +8,8 @@ the uncountably infinite space of all real numbers with a finite number of
 bits.
 
 In 1985, <abbr title='The Institute of Electrical Engineers'>IEEE</abbr>
-released a standard for representing _floating-point_ numbers and the details
-of the operations performed on them, such as _rounding_, _addition_, and
+released a standard for representing such numbers and the details of the
+operations performed on them, such as _rounding_, _addition_, and
 _multiplication_. In this lesson, we will explore this standard and its various
 implications.
 
